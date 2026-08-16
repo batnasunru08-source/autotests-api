@@ -8,13 +8,3 @@ __pycache__
 # allure
 allure-results
 allure-report
-
-# testing
-*.html
-*.json
-videos
-tracing
-
-
-
-.DS_Store

@@ -1,9 +1,9 @@
 import httpx
-from tools.fakers import get_random_email  # Импортируем функцию для генерации случайного email
+from tools.fakers import fake  # Импортируем функцию для генерации случайного email
 
 # Создаем пользователя
 create_user_payload = {
-    "email": get_random_email(),
+    "email": fake.email(),
     "password": "string",
     "lastName": "string",
     "firstName": "string",
@@ -30,7 +30,7 @@ headers = {"Authorization": f"Bearer {login_response_data["token"]["accessToken"
 user_id = create_user_response_data['user']['id']
 user_email = create_user_response_data['user']['email']
 change_user_payload = {
-    "email": get_random_email(),
+    "email": fake.email(),
     "lastName": "string",
     "firstName": "string",
     "middleName": "string"

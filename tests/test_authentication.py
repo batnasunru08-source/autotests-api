@@ -2,9 +2,9 @@ from http import HTTPStatus
 
 import pytest
 
-from clients.authentication.authentication_client import get_authentication_client
+from clients.authentication.authentication_client import get_authentication_client, AuthenticationClient
 from clients.authentication.authentication_schema import LoginRequestSchema, LoginResponseSchema
-from clients.users.public_users_client import get_public_users_client
+from clients.users.public_users_client import get_public_users_client, PublicUsersClient
 from clients.users.users_schema import CreateUserRequestSchema
 from tools.assertions.authentication import assert_login_response
 from tools.assertions.base import assert_status_code
@@ -12,30 +12,27 @@ from tools.assertions.schema import validate_json_schema
 
 @pytest.mark.authentication  # Добавили маркировку users
 @pytest.mark.regression  # Добавили маркировку regression
-def test_login():
-    # 1. Инициализируем клиентов
-    public_users_client = get_public_users_client()
-    authentication_client = get_authentication_client()
+def test_login(public_users_client: PublicUsersClient, authentication_client: AuthenticationClient):
 
-    # 2. Создаём нового пользователя (данные генерируются на нашей стороне)
+    #Создаём нового пользователя (данные генерируются на нашей стороне)
     create_user_request = CreateUserRequestSchema()
     public_users_client.create_user_api(create_user_request)
 
-    # 3. Логинимся под созданным пользователем
+    #Логинимся под созданным пользователем
     login_request = LoginRequestSchema(
         email=create_user_request.email,
         password=create_user_request.password,
     )
     login_response = authentication_client.login_api(login_request)
 
-    # 4. Проверяем статус-код
+    #Проверяем статус-код
     assert_status_code(login_response.status_code, HTTPStatus.OK)
 
-    # 5. Десериализуем ответ в схему
+    #Десериализуем ответ в схему
     login_response_data = LoginResponseSchema.model_validate_json(login_response.text)
 
-    # 6. Проверяем тело ответа
+    #Проверяем тело ответа
     assert_login_response(login_response_data)
 
-    # 7. Валидируем JSON-схему
+    #Валидируем JSON-схему
     validate_json_schema(login_response.json(), LoginResponseSchema.model_json_schema())

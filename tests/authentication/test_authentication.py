@@ -9,22 +9,16 @@ from tools.assertions.authentication import assert_login_response
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
 
-@pytest.mark.authentication  # Добавили маркировку users
-@pytest.mark.regression  # Добавили маркировку regression
-def test_login(function_user: UserFixture, authentication_client: AuthenticationClient):
 
-    # Запрос на логин (login_request -> request)
-    request = LoginRequestSchema(email=function_user.email, password=function_user.password)
-    # Выполняем логин (login_response -> response)
-    response = authentication_client.login_api(request)
-    # Валидация ответа (login_response_data -> response_data)
-    response_data = LoginResponseSchema.model_validate_json(response.text)
+@pytest.mark.regression
+@pytest.mark.authentication
+class TestAuthentication:
+    def test_login(self, function_user: UserFixture, authentication_client: AuthenticationClient):
+        request = LoginRequestSchema(email=function_user.email, password=function_user.password)
+        response = authentication_client.login_api(request)
+        response_data = LoginResponseSchema.model_validate_json(response.text)
 
-    #Проверяем статус-код
-    assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_login_response(response_data)
 
-    #Проверяем тело ответа
-    assert_login_response(response_data)
-
-    #Валидируем JSON-схему
-    validate_json_schema(response.json(), LoginResponseSchema.model_json_schema())
+        validate_json_schema(response.json(), response_data.model_json_schema())

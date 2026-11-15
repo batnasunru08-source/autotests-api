@@ -1,5 +1,7 @@
 from http import HTTPStatus
 
+from allure_commons.types import Severity
+
 import pytest
 import allure  # Импортируем allure
 
@@ -29,6 +31,7 @@ class TestExercises:
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
     @allure.title("Create exercise")  # Добавили заголовок
+    @allure.severity(Severity.BLOCKER)  # Добавили severity
     def test_create_exercise(self, exercises_client: ExercisesClient, function_course: CourseFixture):
         # Формируем запрос на создание задания, используя id созданного курса
         request = CreateExerciseRequestSchema(course_id=function_course.response.course.id)
@@ -48,6 +51,7 @@ class TestExercises:
     @allure.tag(AllureTag.GET_ENTITY)
     @allure.story(AllureStory.GET_ENTITY)  # Добавили story
     @allure.title("Get exercises")  # Добавили заголовок
+    @allure.severity(Severity.BLOCKER)  # Добавили severity
     def test_get_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # Отправляем GET-запрос на получение созданного задания
         response = exercises_client.get_exercise_api(function_exercise.response.exercise.id)
@@ -65,6 +69,7 @@ class TestExercises:
     @allure.tag(AllureTag.UPDATE_ENTITY)
     @allure.story(AllureStory.UPDATE_ENTITY)  # Добавили story
     @allure.title("Update exercise")  # Добавили заголовок
+    @allure.severity(Severity.CRITICAL)  # Добавили severity
     def test_update_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # Формируем данные для обновления задания
         request = UpdateExerciseRequestSchema()
@@ -84,6 +89,7 @@ class TestExercises:
     @allure.tag(AllureTag.DELETE_ENTITY)
     @allure.story(AllureStory.DELETE_ENTITY)  # Добавили story
     @allure.title("Delete exercise")  # Добавили заголовок
+    @allure.severity(Severity.CRITICAL)  # Добавили severity
     def test_delete_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # 1. Удаляем задание
         delete_response = exercises_client.delete_exercise_api(function_exercise.response.exercise.id)
@@ -105,6 +111,7 @@ class TestExercises:
     @allure.tag(AllureTag.GET_ENTITIES)
     @allure.story(AllureStory.GET_ENTITIES)  # Добавили story
     @allure.title("Get exercises")
+    @allure.severity(Severity.BLOCKER)  # Добавили severity
     def test_get_exercises(
             self,
             exercises_client: ExercisesClient,

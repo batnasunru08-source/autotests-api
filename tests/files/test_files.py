@@ -1,6 +1,8 @@
 from http import HTTPStatus
 
 import allure
+from allure_commons.types import Severity
+
 import pytest
 
 from clients.errors_schema import ValidationErrorResponseSchema, InternalErrorResponseSchema
@@ -26,6 +28,7 @@ class TestFiles:
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
     @allure.title("Create file")  # Добавили заголовок
+    @allure.severity(Severity.BLOCKER)  # Добавили severity
     def test_create_file(self, files_client: FilesClient):
         request = CreateFileRequestSchema(upload_file="./testdata/files/image.png")
         response = files_client.create_file_api(request)
@@ -39,6 +42,7 @@ class TestFiles:
     @allure.tag(AllureTag.GET_ENTITY)
     @allure.story(AllureStory.GET_ENTITY)  # Добавили story
     @allure.title("Get file")  # Добавили заголовок
+    @allure.severity(Severity.BLOCKER)  # Добавили severity
     def test_get_file(self, files_client: FilesClient, function_file: FileFixture):
         response = files_client.get_file_api(function_file.response.file.id)
         response_data = GetFileResponseSchema.model_validate_json(response.text)
@@ -51,6 +55,7 @@ class TestFiles:
     @allure.tag(AllureTag.VALIDATE_ENTITY)
     @allure.story(AllureStory.VALIDATE_ENTITY)  # Добавили story
     @allure.title("Create file with empty filename")  # Добавили заголовок
+    @allure.severity(Severity.NORMAL)  # Добавили severity
     def test_create_file_with_empty_filename(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             filename="",
@@ -70,6 +75,7 @@ class TestFiles:
     @allure.tag(AllureTag.VALIDATE_ENTITY)
     @allure.story(AllureStory.VALIDATE_ENTITY)  # Добавили story
     @allure.title("Create file with empty directory")  # Добавили заголовок
+    @allure.severity(Severity.NORMAL)  # Добавили severity
     def test_create_file_with_empty_directory(self, files_client: FilesClient):
         request = CreateFileRequestSchema(
             directory="",
@@ -89,6 +95,7 @@ class TestFiles:
     @allure.tag(AllureTag.DELETE_ENTITY)
     @allure.story(AllureStory.DELETE_ENTITY)  # Добавили story
     @allure.title("Delete file")  # Добавили заголовок
+    @allure.severity(Severity.NORMAL)  # Добавили severity
     def test_delete_file(self, files_client: FilesClient, function_file: FileFixture):
         # 1. Удаляем файл
         delete_response = files_client.delete_file_api(function_file.response.file.id)
@@ -110,6 +117,7 @@ class TestFiles:
     @allure.tag(AllureTag.VALIDATE_ENTITY)  # Добавили тег
     @allure.story(AllureStory.VALIDATE_ENTITY)  # Добавили story
     @allure.title("Get file with incorrect file id")  # Добавили заголовок
+    @allure.severity(Severity.NORMAL)  # Добавили severity
     def test_get_file_with_incorrect_file_id(self, files_client: FilesClient):
         """
         Негативный тест: запрос файла с некорректным file_id возвращает ошибку валидации 422.

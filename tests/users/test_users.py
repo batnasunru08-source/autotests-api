@@ -1,6 +1,8 @@
 from http import HTTPStatus
 
 import allure  # Импортируем библиотеку allure
+from allure_commons.types import Severity
+
 import pytest
 
 from clients.users.private_users_client import PrivateUsersClient
@@ -27,6 +29,7 @@ class TestUsers:
     @allure.tag(AllureTag.CREATE_ENTITY)  # Используем enum
     @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
     @allure.title("Create user")  # Добавляем человекочитаемый заголовок
+    @allure.severity(Severity.BLOCKER)  # Добавили severity
     def test_create_user(self, email: str, public_users_client: PublicUsersClient):
         request = CreateUserRequestSchema(email=fake.email(domain=email))
         response = public_users_client.create_user_api(request)
@@ -40,6 +43,7 @@ class TestUsers:
     @allure.tag(AllureTag.GET_ENTITY)  # Используем enum
     @allure.story(AllureStory.GET_ENTITY)  # Добавили story
     @allure.title("Get user me")  # Добавляем человекочитаемый заголовок
+    @allure.severity(Severity.CRITICAL)  # Добавили severity
     def test_get_user_me(
             self,
             function_user: UserFixture,

@@ -1,8 +1,9 @@
 from http import HTTPStatus
 
 import pytest
-from clients.errors_schema import InternalErrorResponseSchema
+import allure  # Импортируем allure
 
+from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercises_client import ExercisesClient
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema, \
     GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema, GetExercisesQuerySchema, \
@@ -18,6 +19,7 @@ from tools.assertions.schema import validate_json_schema
 @pytest.mark.exercises
 @pytest.mark.regression
 class TestExercises:
+    @allure.title("Create exercise")  # Добавили заголовок
     def test_create_exercise(self, exercises_client: ExercisesClient, function_course: CourseFixture):
         # Формируем запрос на создание задания, используя id созданного курса
         request = CreateExerciseRequestSchema(course_id=function_course.response.course.id)
@@ -34,7 +36,7 @@ class TestExercises:
         # Проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), response_data.model_json_schema())
 
-
+    @allure.title("Get exercises")  # Добавили заголовок
     def test_get_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # Отправляем GET-запрос на получение созданного задания
         response = exercises_client.get_exercise_api(function_exercise.response.exercise.id)
@@ -49,7 +51,7 @@ class TestExercises:
         # Проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), response_data.model_json_schema())
 
-
+    @allure.title("Update exercise")  # Добавили заголовок
     def test_update_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # Формируем данные для обновления задания
         request = UpdateExerciseRequestSchema()
@@ -66,7 +68,7 @@ class TestExercises:
         # Проверяем соответствие JSON-ответа схеме
         validate_json_schema(response.json(), response_data.model_json_schema())
 
-
+    @allure.title("Delete exercise")  # Добавили заголовок
     def test_delete_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # 1. Удаляем задание
         delete_response = exercises_client.delete_exercise_api(function_exercise.response.exercise.id)

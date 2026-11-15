@@ -5,6 +5,7 @@ from clients.courses.courses_schema import UpdateCourseRequestSchema, UpdateCour
 from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
+from tools.logger import get_logger
 
 logger = get_logger("COURSES_ASSERTIONS")  # Создаем логгер с именем "COURSES_ASSERTIONS"
 

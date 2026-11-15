@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjE1OjEwLjczNDI3OSIsInVzZXJfaWQiOiIyNjAxOGQyZS00ZWIyLTQwYTctYTFlMC1mMjg2NTQ1NTc5YjgifQ.WSZPncpDdCBdLfDrJiaq9XY7KzymjnGueRlQYHPDUgc' \
+  -H 'content-length: 424' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ever treat arrive production.","maxScore":67,"minScore":12,"description":"Energy indeed candidate season. View ago vote talk particular rock policy. So star exactly something current light.\nForeign first right new assume. Language management hand white mouth. Of way heavy.","estimatedTime":"5 weeks","previewFileId":"17f5b24b-1d53-4f73-95c0-43fcde55d525","createdByUserId":"26018d2e-4eb2-40a7-a1e0-f286545579b8"}'

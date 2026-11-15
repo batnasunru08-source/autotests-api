@@ -1,0 +1,19 @@
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:19 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:87 Check create course response
+INFO     BASE_ASSERTIONS:base.py:38 Check that "title" equals to Ever treat arrive production.
+INFO     BASE_ASSERTIONS:base.py:38 Check that "max_score" equals to 67
+INFO     BASE_ASSERTIONS:base.py:38 Check that "min_score" equals to 12
+INFO     BASE_ASSERTIONS:base.py:38 Check that "description" equals to Energy indeed candidate season. View ago vote talk particular rock policy. So star exactly something current light.
+Foreign first right new assume. Language management hand white mouth. Of way heavy.
+INFO     BASE_ASSERTIONS:base.py:38 Check that "estimated_time" equals to 5 weeks
+INFO     BASE_ASSERTIONS:base.py:38 Check that "preview_file_id" equals to 17f5b24b-1d53-4f73-95c0-43fcde55d525
+INFO     BASE_ASSERTIONS:base.py:38 Check that "created_by_user_id" equals to 26018d2e-4eb2-40a7-a1e0-f286545579b8
+INFO     SCHEMA_ASSERTIONS:schema.py:22 Validating JSON schema

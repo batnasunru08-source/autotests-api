@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjE1OjEzLjA4NTQ1OSIsInVzZXJfaWQiOiI0NDQxYzk3ZC0xMTI1LTQ5ZDYtOTdiMi02ZjdhMDZjYTNlNDcifQ.eC2i_2LYwA94veWHBzjxOF9ecbvMvIqrOeD7PNH2-mw' \
+  -H 'content-length: 419' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fall education book check.","maxScore":94,"minScore":3,"description":"Then call school significant. Tend long owner stuff someone partner subject serve. Middle dog maintain since.\nArticle hand plan traditional spend. Bring example know feel put. Expect animal service.","estimatedTime":"6 weeks","previewFileId":"bccd1e39-f8c6-40e4-9fca-16c57914540c","createdByUserId":"4441c97d-1125-49d6-97b2-6f7a06ca3e47"}'

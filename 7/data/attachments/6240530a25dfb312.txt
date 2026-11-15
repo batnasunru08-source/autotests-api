@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjE1OjE0LjU2MTQ0OSIsInVzZXJfaWQiOiI5OTJmNmYwNS02MGFmLTQ1MTgtODExNy01OTYyNzNlMGQ4ZjMifQ.zwgbpq8nsqe0HC-h_p4Fqr8qK6GH4ljHi1OW1Zz5EiA' \
+  -H 'content-length: 442' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cold different traditional mission should star identify.","maxScore":57,"minScore":21,"description":"Long item inside really. Wonder personal field yeah green second. Reach single dinner lawyer.\nAuthority big recognize somebody paper. Exactly business own such prevent brother country great.","estimatedTime":"8 weeks","previewFileId":"e97377e1-5ece-4a6b-a381-46956b43abc9","createdByUserId":"992f6f05-60af-4518-8117-596273e0d8f3"}'

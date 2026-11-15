@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjE1OjE0LjU2MTQ0OSIsInVzZXJfaWQiOiI5OTJmNmYwNS02MGFmLTQ1MTgtODExNy01OTYyNzNlMGQ4ZjMifQ.zwgbpq8nsqe0HC-h_p4Fqr8qK6GH4ljHi1OW1Zz5EiA' \
+  -H 'content-length: 208' \
+  -H 'content-type: application/json' \
+  -d '{"title":"There author party.","courseId":"5003a8b3-904e-4673-8aff-7a1b28d6e55e","maxScore":52,"minScore":22,"orderIndex":3,"description":"Treat doctor themselves military program.","estimatedTime":"6 weeks"}'

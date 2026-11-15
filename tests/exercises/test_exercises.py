@@ -27,11 +27,14 @@ from tools.assertions.schema import validate_json_schema
 @allure.tag(AllureTag.EXERCISES, AllureTag.REGRESSION)
 @allure.epic(AllureEpic.LMS)  # Добавили epic
 @allure.feature(AllureFeature.EXERCISES)  # Добавили feature
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.EXERCISES)
 class TestExercises:
     @allure.tag(AllureTag.CREATE_ENTITY)
     @allure.story(AllureStory.CREATE_ENTITY)  # Добавили story
     @allure.title("Create exercise")  # Добавили заголовок
     @allure.severity(Severity.BLOCKER)  # Добавили severity
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
     def test_create_exercise(self, exercises_client: ExercisesClient, function_course: CourseFixture):
         # Формируем запрос на создание задания, используя id созданного курса
         request = CreateExerciseRequestSchema(course_id=function_course.response.course.id)
@@ -52,6 +55,7 @@ class TestExercises:
     @allure.story(AllureStory.GET_ENTITY)  # Добавили story
     @allure.title("Get exercises")  # Добавили заголовок
     @allure.severity(Severity.BLOCKER)  # Добавили severity
+    @allure.sub_suite(AllureStory.GET_ENTITY)
     def test_get_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # Отправляем GET-запрос на получение созданного задания
         response = exercises_client.get_exercise_api(function_exercise.response.exercise.id)
@@ -70,6 +74,7 @@ class TestExercises:
     @allure.story(AllureStory.UPDATE_ENTITY)  # Добавили story
     @allure.title("Update exercise")  # Добавили заголовок
     @allure.severity(Severity.CRITICAL)  # Добавили severity
+    @allure.sub_suite(AllureStory.UPDATE_ENTITY)
     def test_update_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # Формируем данные для обновления задания
         request = UpdateExerciseRequestSchema()
@@ -90,6 +95,7 @@ class TestExercises:
     @allure.story(AllureStory.DELETE_ENTITY)  # Добавили story
     @allure.title("Delete exercise")  # Добавили заголовок
     @allure.severity(Severity.CRITICAL)  # Добавили severity
+    @allure.sub_suite(AllureStory.DELETE_ENTITY)
     def test_delete_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
         # 1. Удаляем задание
         delete_response = exercises_client.delete_exercise_api(function_exercise.response.exercise.id)
@@ -112,6 +118,7 @@ class TestExercises:
     @allure.story(AllureStory.GET_ENTITIES)  # Добавили story
     @allure.title("Get exercises")
     @allure.severity(Severity.BLOCKER)  # Добавили severity
+    @allure.sub_suite(AllureStory.GET_ENTITIES)
     def test_get_exercises(
             self,
             exercises_client: ExercisesClient,

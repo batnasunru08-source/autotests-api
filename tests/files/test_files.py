@@ -43,6 +43,7 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @pytest.mark.xdist_group(name="files-group")  # Добавили xdist группу
     @allure.tag(AllureTag.GET_ENTITY)
     @allure.story(AllureStory.GET_ENTITY)  # Добавили story
     @allure.title("Get file")  # Добавили заголовок
@@ -93,6 +94,7 @@ class TestFiles:
         # Дополнительная проверка структуры JSON
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @pytest.mark.xdist_group(name="files-group")  # Добавили xdist группу
     @allure.tag(AllureTag.DELETE_ENTITY)
     @allure.story(AllureStory.DELETE_ENTITY)  # Добавили story
     @allure.title("Delete file")  # Добавили заголовок

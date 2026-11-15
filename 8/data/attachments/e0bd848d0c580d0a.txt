@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/c7da3598-9659-44ed-8e9d-486da1a60b39' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjMyOjQyLjA2NzUwOSIsInVzZXJfaWQiOiI1YmZkNmRiMy04NTliLTQ2MTMtOTYzZi0yYjAwZjIzNGMyNGUifQ.qQN2gAdLQdowUkbCUDVvqJC8xbz2wbtk4jJXn2YW0B4' \
+  -H 'content-length: 297' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Kind leader institution deep space agency.","maxScore":91,"minScore":21,"orderIndex":89,"description":"Everyone include until ability. Account space out then today. Debate personal couple one.\nItem many garden two herself policy. Carry buy least opportunity.","estimatedTime":"5 weeks"}'

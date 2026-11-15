@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjMyOjM5LjQ2NjQxMSIsInVzZXJfaWQiOiJmNmJjZWJiZC1mNWQxLTQ1NTItODQwNy1hMDE1MDMyZGQzYTcifQ.dKcIHhHLd-lpNP5r_VHF8l5GrqIOih0oiKqtZTSSpLw' \
+  -H 'content-length: 377' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Response local ago sell be argue.","maxScore":73,"minScore":24,"description":"Pretty religious physical person week none. Just great concern single executive interview something.\nBad idea year walk opportunity above out front.","estimatedTime":"2 weeks","previewFileId":"fdf7aee3-c088-46e9-b692-4546d3cdf0ea","createdByUserId":"f6bcebbd-f5d1-4552-8407-a015032dd3a7"}'

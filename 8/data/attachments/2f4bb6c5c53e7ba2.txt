@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/8b85e14e-ae1e-432f-a807-72cd981b0637' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjMyOjQwLjg5OTMxMSIsInVzZXJfaWQiOiJkZjMwNjc4OC1jYTE2LTQyNmMtODA2Mi05Yzk2N2UyZGI3YzYifQ.d57NIFiyw2TpfBhqBUJyBBqtpMIhf-iffZP50OupI_s' \
+  -H 'content-length: 248' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Economic describe recent class media heavy.","maxScore":94,"minScore":17,"description":"Himself main yes manager. Raise vote man such look make successful forget. Quality success indeed win record nature build.","estimatedTime":"1 weeks"}'

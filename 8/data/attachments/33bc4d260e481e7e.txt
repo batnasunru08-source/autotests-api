@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjMyOjQwLjMzMzY4NiIsInVzZXJfaWQiOiJkYzVkMTUwZi03NDNjLTRhYzEtOWU1YS1hM2YwNGM0ODBmNTMifQ.otYhMoGjd22udyGh3mx8JAoh-LXiAFZamNTKAQl2DjU' \
+  -H 'content-length: 327' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Miss station say yourself factor.","maxScore":79,"minScore":12,"description":"Security center environment door religious every. Know store issue pretty. Cost hope put kind such.","estimatedTime":"5 weeks","previewFileId":"5b53b2f5-1795-46d9-a65e-c07ee82b09c3","createdByUserId":"dc5d150f-743c-4ac1-9e5a-a3f04c480f53"}'

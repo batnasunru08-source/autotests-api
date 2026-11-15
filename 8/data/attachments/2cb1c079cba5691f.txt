@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjMyOjQzLjkzOTIxMyIsInVzZXJfaWQiOiIyMDY1Mzk0NS0xM2M2LTQ5NjUtOWIxMi0yNTU0OWVhNDY3N2QifQ.wI5fzLvnRkDGXQ3xWiN4JC7-Y9HWEeZw07C9ep9ftFM' \
+  -H 'content-length: 378' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Data pretty huge training not take authority.","maxScore":98,"minScore":1,"description":"Course page avoid view current education involve. Low skin try all.\nYear money door here candidate face per. So tell recently choice vote.","estimatedTime":"4 weeks","previewFileId":"9cbc3ea2-aa3a-4920-817b-700d0d36eb0b","createdByUserId":"20653945-13c6-4965-9b12-25549ea4677d"}'

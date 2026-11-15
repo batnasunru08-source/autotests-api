@@ -1,3 +1,4 @@
+import allure  # Импортируем allure
 from httpx import Response
 
 from clients.api_client import APIClient
@@ -13,6 +14,7 @@ class AuthenticationClient(APIClient):
     Клиент для работы с /api/v1/authentication
     """
 
+    @allure.step("Authenticate user")  # Добавили allure шаг
     # Теперь используем pydantic-модель для аннотации
     def login_api(self, request: LoginRequestSchema) -> Response:
         """
@@ -27,6 +29,7 @@ class AuthenticationClient(APIClient):
             json=request.model_dump(by_alias=True)
         )
 
+    @allure.step("Refresh authentication token")  # Добавили allure шаг
     # Теперь используем pydantic-модель для аннотации
     def refresh_api(self, request: RefreshRequestSchema) -> Response:
         """

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjA1OjQ1LjU1NzcxMiIsInVzZXJfaWQiOiI2MjU3MmIyNi04OWJiLTQ4NTItYmQzMi1jNjRiMzExNjI2NDkifQ.HcISCxeeVSVVeBPOIK5u4FxElE82LDB2wlOlmEqZDE4' \
+  -H 'content-length: 363' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Forward wide experience involve every dog now.","maxScore":59,"minScore":5,"description":"Night own must the particular. Candidate compare do indicate employee sense.\nDevelop production try science interview buy.","estimatedTime":"2 weeks","previewFileId":"42947c32-dfc6-4e7d-8e10-e9784fd45dc4","createdByUserId":"62572b26-89bb-4852-bd32-c64b31162649"}'

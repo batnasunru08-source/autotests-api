@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjA1OjQ1LjMxOTY5OSIsInVzZXJfaWQiOiIxYjRiN2MxMi0yNGMyLTQ2ZjMtYjk2MC04ZWI0ZDA2ZWZlMzEifQ.F9Kksf27xD9oar5YGSHj7n7kxgBw0Q4NNu9_Yu0TcDs' \
+  -H 'content-length: 324' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Author pick paper second against.","maxScore":98,"minScore":24,"description":"Ahead adult close people class little memory. Especially computer player would political weight.","estimatedTime":"1 weeks","previewFileId":"a281a0ea-0699-4de6-a15d-3b16e536dba4","createdByUserId":"1b4b7c12-24c2-46f3-b960-8eb4d06efe31"}'

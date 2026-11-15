@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjA1OjQ0LjE2NTM4NSIsInVzZXJfaWQiOiIxOWNjOWVhYy1lMWIyLTQxZWUtOWM0Ny02MjAxNzA0MmQ3YTEifQ.GRQKPYGg7yyWo9_zw0xsoajGbeJ1hpTcPtSd61qxyWg' \
+  -H 'content-length: 338' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Religious heart activity behavior foreign.","maxScore":80,"minScore":19,"description":"Billion very itself describe. Successful back really kid practice however. Region huge account laugh.","estimatedTime":"3 weeks","previewFileId":"11674c81-e18a-4f31-be00-971da9316c67","createdByUserId":"19cc9eac-e1b2-41ee-9c47-62017042d7a1"}'

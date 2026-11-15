@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/74846550-459f-465f-a263-1884cff56a2d' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjA1OjQzLjE3MjgxMyIsInVzZXJfaWQiOiI3MGM0YTJmMS00NTNjLTQyNjYtYWZjYy1lODBiM2RlODNhY2IifQ.8I_-vGK--ZbmpyCICW6Uk4cXNgbdW2KVnIjkJBSxBGc' \
+  -H 'content-length: 248' \
+  -H 'content-type: application/json' \
+  -d '{"title":"When source trouble cut want Congress agreement.","maxScore":75,"minScore":17,"description":"Behind even price truth and weight feeling item.\nRock art white term future. Art though structure care there factor.","estimatedTime":"1 weeks"}'

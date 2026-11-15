@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjA1OjQxLjc4NDY1OSIsInVzZXJfaWQiOiI4Mzg3OWMzYi03NjlhLTRkODQtOGM2NS04OWViNWZiMzI2ZjAifQ.IzEBEcaZtQqGB2x8YOwhEtnv3DK6Fn8wlzixiduc3fI' \
+  -H 'content-length: 440' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Even leg truth process reveal probably south.","maxScore":65,"minScore":4,"description":"Research beautiful even treat suddenly can list. Decade more me director someone.\nRun hard purpose can bad help lot.\nThere another tonight enter go. Three medical enter why camera especially surface.","estimatedTime":"7 weeks","previewFileId":"a7a4ef5f-5bc7-476a-8c96-cf52ac8e02c3","createdByUserId":"83879c3b-769a-4d84-8c65-89eb5fb326f0"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/38a71fe2-dd43-44e6-9fcc-2136c5cbab3f' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjA1OjQ0LjQwNDc5MiIsInVzZXJfaWQiOiJjZjIwODNiZS03ODUwLTRhYTQtOTI2YS02NmYzMTYwYjIzMzQifQ.DX60JEwTinHZmftOOKpeKru76BGUE5D2dLolC5V4Fc4' \
+  -H 'content-length: 289' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Page they manage so buy must pressure dog.","maxScore":97,"minScore":14,"orderIndex":80,"description":"Miss yes wait agency career medical. Painting himself continue hair among white country deep. Project nor indeed approach realize cell brother only.","estimatedTime":"3 weeks"}'

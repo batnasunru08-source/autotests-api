@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTExLTE1VDE3OjA1OjQzLjE3MjgxMyIsInVzZXJfaWQiOiI3MGM0YTJmMS00NTNjLTQyNjYtYWZjYy1lODBiM2RlODNhY2IifQ.8I_-vGK--ZbmpyCICW6Uk4cXNgbdW2KVnIjkJBSxBGc' \
+  -H 'content-length: 341' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Suggest likely though modern rather.","maxScore":56,"minScore":16,"description":"Quite be machine high. Available play call administration position. It scene PM market three including memory.","estimatedTime":"7 weeks","previewFileId":"4f917790-b3ad-478f-81f2-f60180397588","createdByUserId":"70c4a2f1-453c-4266-afcc-e80b3de83acb"}'
